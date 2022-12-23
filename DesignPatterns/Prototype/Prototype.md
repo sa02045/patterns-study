@@ -69,7 +69,8 @@ const dog1 = new Dog("Max");
 7. `__proto__` 프로퍼티는 생략할 수 있다!
 
 8. 생성자함수.prototype 프러퍼티는 객체이고, 이 객체는 constructor 프러퍼티를 가진다
-9. constructor 프러퍼티는 원래의 생성자 함수를 가리킨다
+9. 
+10. constructor 프러퍼티는 원래의 생성자 함수를 가리킨다
 
 ## 질문
 
