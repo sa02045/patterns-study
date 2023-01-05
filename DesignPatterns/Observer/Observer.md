@@ -78,8 +78,10 @@ class Subject {
 
 ### 2. observer의 참조값을 가지는 `__ob__` 프로퍼티를 할당. Observable한 객체가 되었다.
 
-    <img width="583" alt="스크린샷 2023-01-05 오후 6 15 21" src="https://user-images.githubusercontent.com/104751519/210744213-2fbe7277-1cde-4497-a62b-b216707a966c.png">
-    <img width="185" alt="스크린샷 2023-01-05 오후 6 15 41" src="https://user-images.githubusercontent.com/104751519/210744224-52ed0be8-cade-4037-a75b-d78dcf8bc618.png">
+ <img width="583" alt="스크린샷 2023-01-05 오후 6 15 21" src="https://user-images.githubusercontent.com/104751519/210744213-2fbe7277-1cde-4497-a62b-b216707a966c.png" />
+    
+    
+<img width="185" alt="스크린샷 2023-01-05 오후 6 15 41" src="https://user-images.githubusercontent.com/104751519/210744224-52ed0be8-cade-4037-a75b-d78dcf8bc618.png" />
 
 ### vue reactivity + observer 참고사이트
 
