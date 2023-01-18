@@ -13,7 +13,7 @@ https://v2.vuejs.org/v2/style-guide/?redirect=true#Private-property-names-essent
 ```js
 var HelloMixins = {
   methods: {
-    $_myGreatMixin_update: function () {
+    $_HelloMixins_update: function () {
     }
   }
 }
@@ -22,7 +22,7 @@ new Vue({
   mixins: [HelloMixins],
   methods: {
     something:{
-        $_myGreatMixin_update()
+        $_HelloMixins_update()
     }
   }
 })
