@@ -57,6 +57,8 @@ function Component(props) {
 
 ### 개인적인 생각) 선언적 프로그래밍
 
+<img width="542" alt="스크린샷 2023-01-26 오후 4 54 32" src="https://user-images.githubusercontent.com/50866506/214805302-4991efb8-d12b-4e58-90d7-a16ffea3e08c.png">
+
 ```js
 <Toggle
   // on, toggle에 대한 세부 구현은 숨긴다
@@ -74,5 +76,3 @@ function Component(props) {
 ### Wrapper Hell
 
 <img src="https://pbs.twimg.com/media/DUQ8HUQUMAADUQp?format=jpg&name=large" width="800"  />
-
-### 주의해야할 점
