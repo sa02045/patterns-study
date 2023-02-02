@@ -1,5 +1,5 @@
 import React from "react";
-
+useE
 function example({ count }) {
   if (count !== 3) {
     useEffect(() => {
