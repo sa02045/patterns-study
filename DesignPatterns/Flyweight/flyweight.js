@@ -27,3 +27,7 @@ class treeFactory {
 
 const aTree = new treeFactory("A");
 const bTree = new treeFactory("A"); // 이미 생성된 객체를 반환한다. 새로운 메모리에 객체를 생성하는 것이 아님
+
+aTree.position("12", "32");
+
+// 고유상태랑 외부상태를 나누어 관리하자
