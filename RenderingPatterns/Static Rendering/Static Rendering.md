@@ -6,6 +6,7 @@
 - 웹 앱보다는 웹 페이지라고 할 수 있다
 - 유저 인터렉션이 적고 업데이트가 빈번하지 않은 경우에 적합하다
 - SPA보다는 MPA(MultiPageApplication)에 적합하다
+- CDN으로 미리 렌더링한 HTML을 올려놓으면 요청에 대해 더 빠른 응답이 가능
 
 
 ##  Static Rendering vs Server Side Rendering
@@ -71,3 +72,52 @@
 CMS 서비스들
 - Strapi CMS
 - Netlify CMS
+
+
+## Next.js에서 SSG 사용하기
+
+
+### 12버전까지는
+- getStaticProps
+- getStaticPaths (`/posts/2` 동적 경로가 있는경우  처럼)
+
+
+### getStaticProps
+```js
+export async function getStaticProps(context) {
+  return {
+    props: {}, // will be passed to the page component as props
+  }
+}
+```
+
+- props로 return된 값이 컴포넌트에 전달됨(빌드타임)
+- 항상 서버에서 실행됨. 클라이언트(브라우저)에서 실행되지 않음
+
+
+API도 요청해서(빌드타임에) 컴포넌트에 전달할 수 있다
+
+```js
+export async function getStaticProps(context) {
+    const res = await fetch('https://.../posts/')
+    const data = await res.json()
+  return {
+    props: {}, // will be passed to the page component as props
+  }
+}
+```
+
+### 13버전에서
+Next.js 13버전부터 모든 컴포넌트는 서버 컴포넌트이다. 12버전까지 사용하던 getStaticProps 함수를 사용할 필요가 없다
+
+
+native fetch Web API 함수로 SSG
+- force-cache 옵션은 Default로 생략가능
+- no-store 옵션을 주면 서버사이드렌더링처럼 동작 (모든 요청이 올때마다 refetch함)
+
+```js
+fetch(URL, { cache: 'force-cache'})
+
+fetch(URL, { cache: 'no-store'})
+```
+
