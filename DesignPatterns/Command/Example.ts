@@ -43,6 +43,7 @@ class BankManager {
     this.receiver = receiver;
   }
 
+  // 명령 등록
   addCommand(command: ICommand) {
     this.commands[command.constructor.name] = command;
   }
@@ -53,6 +54,7 @@ class BankManager {
 }
 
 // 5. Client
+
 const receiver = new Receiver(100);
 const bankManager = new BankManager(receiver);
 bankManager.addCommand(new Deposit());
