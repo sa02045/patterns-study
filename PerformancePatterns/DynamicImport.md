@@ -45,10 +45,9 @@ function MyComponent() {
 // bad
 import { lazy } from "react";
 
-function Editor() {
-  // 🔴 Bad: This will cause all state to be reset on re-renders
-  const MarkdownPreview = lazy(() => import("./MarkdownPreview.js"));
-}
+const MarkdownPreview = lazy(() => import("./MarkdownPreview.js"));
+
+function Editor() {}
 ```
 
 ## Vue import
