@@ -81,6 +81,18 @@ function foo() {
 export const value = "foo"; // 가능
 ```
 
+### Lodash Issue
+
+lodash는 commonJS로 작성되기 때문에 번들하기 까다롭다.
+
+- ES Module로 작성된 lodash-es를 사용할 수 있다.
+
+```js
+// 번들링되지 않는다. 전체 코드를 포함한다
+import * as _ from "lodash";
+import { cloneDeep } from "lodash";
+```
+
 참고
 
 1. https://ui.toast.com/weekly-pick/ko_20180716
@@ -88,3 +100,4 @@ export const value = "foo"; // 가능
 3. https://web.dev/commonjs-larger-bundles/
 4. https://yceffort.kr/2021/08/javascript-tree-shaking
 5. https://toss.tech/article/commonjs-esm-exports-field
+6. https://ykwan0714.github.io/lodash-%ED%81%AC%EA%B8%B0-%EC%A4%84%EC%9D%B4%EA%B8%B0/
